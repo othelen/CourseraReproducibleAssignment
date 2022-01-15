@@ -1,0 +1,113 @@
+---
+title: "Peer-graded Assignment"
+runningheader: "Reproducible Templates for Analysis and Dissemination" # only for pdf output
+subtitle: "Reproducible Templates for Analysis and Dissemination" # only for html output
+author: "Olaf Thelen-Presanis"
+date:  "`r Sys.Date()`"
+output:
+  rmdformats::downcute:
+    self_contained: true
+    default_style: "dark"
+    downcute_theme: "default"
+---
+
+```{r setup, include=FALSE}
+## Global options
+knitr::opts_chunk$set(cache = TRUE)
+```
+
+### Preparation
+
+Loading packages used in this assignment. 
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(magrittr)
+library(kableExtra)
+```
+
+*Note:* the source code of this publication can be found on [GitHub](https://github.com/othelen/CourseraReproducibleAssignment)
+
+# Summary {#summary}
+
+This is the final, peer-graded assignment for the Coursera MOOC on 'Reproducible Templates for Analysis and Dissemination'.
+
+It contains
+
+\newcommand{\boxedcheckmark}
+  {{\ooalign{$\Box$\cr\hidewidth$\checkmark$\hidewidth}}}
+  
+  - a title $\checkmark$
+  
+  - My Name as Author  $\checkmark$
+
+  - The Date  $\checkmark$
+
+  - A section of text summarizing the information in your document or slide presentation (keep this between 3-4 sentences) - *which is actually this section* $\checkmark$
+  
+  - A [bulleted list](#list) of 3 or more items (either numbered or unnumbered) $\checkmark$
+  
+  -  A [plot](#pressure) of the built-in 'pressure' dataset $\checkmark$
+  
+  - A [table](#table) of the top 6 rows of the built-in 'cars' dataset $\checkmark$
+  
+  - Apply a [theme](#design) or style that changes the font, colors, or other formatting instead of the default template. (HINT: Remember to explore the options in the prettydoc, rmdformats, or revealjs packages) $\checkmark$
+
+
+# Bulleted list {#list}
+
+Poor sleep quality has been linked with the following symptoms:
+
++ higher levels of negative mood
+
++ physical symptoms such as insomnia
+
++ stress
+
++ use of medications
+
++ persistent psychological distress (Glozier et al., 2010; Lund et al., 2010)
+
+*Source:* [APA Style Website](https://apastyle.apa.org/style-grammar-guidelines/lists/bulleted)  
+
+<a href="#summary">back to top</a>
+
+# Pressure Data Set {#pressure}
+
+```{r}
+plot(pressure, xlab = "Temperature (deg C)",
+     ylab = "Pressure (mm of Hg)",
+     main = "pressure data: Vapor Pressure of Mercury")
+```
+
+<a href="#summary">back to top</a>
+
+# Top rows of the `cars` dataset {#table}
+
+```{r}
+knitr:: kable(head(cars),
+              caption = "Top 6 rows of cars dataset") %>%
+  kable_styling(full_width = F)
+```
+
+<a href="#summary">back to top</a>
+
+
+# Change of design {#design}
+
+As described by (Xie et al. 2021), useful templates come in various packages. One is the **rmdformats** package (Barnier 2021), which "provides a number of templates that pass different custom styling functions to the output option" ^[Xie et al. 2021, Chapter 16.8.1].
+
+I am using the *downcute* template with the following `YAML header` settings:
+
+```
+output:
+  rmdformats::downcute:
+    self_contained: true
+    default_style: "dark"
+    downcute_theme: "default"
+```
+
+<a href="#summary">back to top</a>
+
+# References {#references}
+Barnier, Julien. 2021. Rmdformats: HTML Output Formats and Templates for Rmarkdown Documents.   https://github.com/juba/rmdformats.  
+Yihui Xie, Christophe Dervieux, Emily Riederer. 2021. R Markdown Cookbook.  
+https://bookdown.org/yihui/rmarkdown-cookbook/
