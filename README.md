@@ -34,3 +34,4 @@ For your final assignment, you need to create a document or presentation using R
 
 When you complete this assignment, submit the URL of your RPubs published document or presentation below.
 
+#### *Note:* the HTML is published on [Rpubs](http://rpubs.com/opresanis/reproducible)

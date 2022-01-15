@@ -19,12 +19,12 @@ knitr::opts_chunk$set(cache = TRUE)
 ### Preparation
 
 Loading packages used in this assignment. 
-```{r echo=TRUE, message=FALSE, warning=FALSE}
+```{r prep, echo=TRUE, message=FALSE, warning=FALSE}
 library(magrittr)
 library(kableExtra)
 ```
 
-*Note:* the source code of this publication can be found on [GitHub](https://github.com/othelen/CourseraReproducibleAssignment)
+*Note:* the source code of this publication can be found on [GitHub](https://github.com/othelen/CourseraReproducibleAssignment){target="_blank"}
 
 # Summary {#summary}
 
@@ -72,7 +72,7 @@ Poor sleep quality has been linked with the following symptoms:
 
 # Pressure Data Set {#pressure}
 
-```{r}
+```{r plot}
 plot(pressure, xlab = "Temperature (deg C)",
      ylab = "Pressure (mm of Hg)",
      main = "pressure data: Vapor Pressure of Mercury")
@@ -82,7 +82,7 @@ plot(pressure, xlab = "Temperature (deg C)",
 
 # Top rows of the `cars` dataset {#table}
 
-```{r}
+```{r table}
 knitr:: kable(head(cars),
               caption = "Top 6 rows of cars dataset") %>%
   kable_styling(full_width = F)
@@ -108,6 +108,6 @@ output:
 <a href="#summary">back to top</a>
 
 # References {#references}
-Barnier, Julien. 2021. Rmdformats: HTML Output Formats and Templates for Rmarkdown Documents.   https://github.com/juba/rmdformats.  
+Barnier, Julien. 2021. Rmdformats: HTML Output Formats and Templates for Rmarkdown Documents.   <https://github.com/juba/rmdformats>{target="_blank"}.  
 Yihui Xie, Christophe Dervieux, Emily Riederer. 2021. R Markdown Cookbook.  
-https://bookdown.org/yihui/rmarkdown-cookbook/
+<https://bookdown.org/yihui/rmarkdown-cookbook/>{target="_blank"}
